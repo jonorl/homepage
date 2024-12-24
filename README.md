@@ -1,2 +1,2 @@
 # to do list
-To do list project for Project Odin
+Homepage project for The Odin Project
