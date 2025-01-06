@@ -1,19 +1,23 @@
 /* default css */
 
 * {
-  /* background-color: black; */
+
   color: aliceblue;
   font-size: 14px;
   font-family: "Roboto";
-
-
 }
+
+body {
+  background-color: black;
+}
+
 header {
   max-width: 600px;
   margin: 0 auto;
 
 
     display: block;
+
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Cpath d='M0 0 L400 0 L0 200 Z' fill='black'/%3E%3Cpath d='M400 0 L0 200 L400 200 Z' fill='lightblue'/%3E%3C/svg%3E");    background-repeat: no-repeat;
 }
 
@@ -27,8 +31,9 @@ h1{
   justify-content: center;
   display: flex;
   flex-direction: row;
-  gap: 3vh;
+  gap: 5vw;
   text-align: center;
+  margin-top: 3vh;
 }
 
 i {
@@ -65,4 +70,7 @@ p {
   margin: 0 auto;
   border: solid black 1px;
   padding: 1em;
+}
+.devicon-github-original-wordmark, .devicon-linkedin-plain {
+  background-color: transparent
 }
