@@ -1,7 +1,6 @@
 /* default css */
 
 * {
-
   color: aliceblue;
   font-size: 14px;
   font-family: "Roboto";
@@ -15,7 +14,7 @@ header {
   max-width: 600px;
   margin: 0 auto;
   display: block;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Cpath d='M0 0 L400 0 L0 200 Z' fill='black'/%3E%3Cpath d='M400 0 L0 200 L400 200 Z' fill='lightblue'/%3E%3C/svg%3E");  
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Cpath d='M0 0 L400 0 L0 200 Z' fill='black'/%3E%3Cpath d='M400 0 L0 200 L400 200 Z' fill='lightblue'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -29,8 +28,6 @@ main {
   background-size: cover;
 }
 
-
-
 h1 {
   text-align: center;
   font-size: 1.5em;
@@ -38,8 +35,9 @@ h1 {
 }
 
 h2 {
-  text-align: center;
+  
   align-self: center;
+  justify-self: left;
   font-size: 1.2em;
   text-shadow: 0 0 2px #000;
 }
@@ -64,11 +62,10 @@ i {
 .floating-picture {
   position: relative;
   text-align: center;
-
 }
 
 .profile-picture {
-  width: 35vh;
+  width: 70vw;
   margin: 1.5em;
   border-radius: 25px;
   /* padding: 1.5em */
@@ -82,8 +79,9 @@ i {
 }
 
 #project-image {
+  display: flex;
+  margin: 0 auto;
   width: 35vh;
-  margin: 1.5em;
   border-radius: 25px;
 }
 
@@ -97,30 +95,70 @@ i {
   background: transparent;
 }
 
-p {
+header p,
+#card p {
   border-radius: 25px;
   background-color: aliceblue;
   color: #000;
-  width: 80%;
-  margin: 0 auto;
+  margin: 1vw;
   border: solid black 1px;
   padding: 1em;
 }
-.devicon-github-original-wordmark.colored, .devicon-linkedin-plain.colored {
-  background-color: transparent
+.devicon-github-original-wordmark.colored,
+.devicon-linkedin-plain.colored {
+  background-color: transparent;
+}
+
+i.devicon-github-original {
+  font-size: 29px;
 }
 
 .subheader {
   display: grid;
   grid-template-columns: 1fr auto auto;
   grid-template-rows: auto 1fr;
+  margin: 0 10vw 
 }
 
-.subheader>p {
+.subheader > p {
   grid-column: span 3;
+  padding: 0;
 }
 
 .github-icon {
-display: flex;
-align-self: center;
+  display: flex;
+  align-self: center;
+}
+
+#card {
+  margin-bottom: 5vh;
+}
+
+footer {
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  background-color: #add8e6;
+}
+
+.footer-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-container p,
+.footer-container h1, .footer-container>.footer-logos{
+  color: #000;
+  text-shadow: none;
+  padding: 0 5vw;
+}
+
+.footer-container img {
+  position: relative;
+  text-align: center;
+  max-width: inherit;
+  width: 95.5vw;
+  /* max-width: inherit; */
+  border-radius: 25px;
+  margin: 0;
 }
