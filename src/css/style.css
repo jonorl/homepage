@@ -103,6 +103,7 @@ header p,
   margin: 1vw;
   border: solid black 1px;
   padding: 1em;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); 
 }
 .devicon-github-original-wordmark.colored,
 .devicon-linkedin-plain.colored {
@@ -149,6 +150,10 @@ footer {
 .footer-container {
   max-width: 600px;
   margin: 0 auto;
+}
+
+.footer-container h1 {
+  padding-top: 2vh !important;
 }
 
 .footer-container p,
