@@ -11,12 +11,12 @@ body {
 }
 
 header {
-  max-width: 600px;
+  max-width: 550px;
+  padding-left: 3vw;
+  padding-right: 3vw;
   margin: 0 auto;
   display: block;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Cpath d='M0 0 L400 0 L0 200 Z' fill='black'/%3E%3Cpath d='M400 0 L0 200 L400 200 Z' fill='lightblue'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
 
 main {
@@ -68,14 +68,22 @@ i {
   width: 70vw;
   margin: 1.5em;
   border-radius: 25px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Cpath d='M0 0 L400 0 L0 200 Z' fill='black'/%3E%3Cpath d='M400 0 L0 200 L400 200 Z' fill='lightblue'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
   /* padding: 1.5em */
 }
 
-.profile-picture {
-  width: 35vh;
-  margin: 1.5em;
+.background-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #2AB7CA;  /* Turquoise blue color */
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 70% 0);
   border-radius: 25px;
-  /* padding: 1.5em */
+  z-index: -1;
 }
 
 #project-image {
@@ -87,9 +95,8 @@ i {
 
 .my-name {
   position: absolute;
-  bottom: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 40vh;
+  margin-left: 17vw;
   font-size: larger;
   text-shadow: 0 0 2px #000;
   background: transparent;
@@ -98,11 +105,12 @@ i {
 header p,
 #card p {
   border-radius: 25px;
-  background-color: aliceblue;
+
+  /* background-color: aliceblue; */
   color: #000;
-  margin: 1vw;
-  border: solid black 1px;
-  padding: 1em;
+  margin: 3vw;
+  /* border: solid black 1px; */
+  padding: 3vw;
 }
 .devicon-github-original-wordmark.colored,
 .devicon-linkedin-plain.colored {
@@ -135,7 +143,8 @@ i.devicon-github-original {
 }
 
 del {
-  color: #000;
+  color: aliceblue;
+  /* text-decoration-color:#000 */
 }
 
 footer {
@@ -165,4 +174,25 @@ footer {
   width: 95.5vw;
   border-radius: 25px;
   margin: 0;
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+
+  header {
+   max-width: none; 
+  }
+
+.profile-picture {
+  width: 12vw;
+}
+
+.background-shape {
+  width: auto;
+}
+
 }
