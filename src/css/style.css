@@ -67,6 +67,10 @@ i {
 }
 
 .profile-picture {
+  display: none;
+}
+
+.profile-picture-name-under {
   width: 70vw;
   margin: 1.5em;
   border-radius: 25px;
@@ -97,8 +101,9 @@ i {
 
 .my-name {
   position: absolute;
-  margin-top: 40vh;
+  display: none;
   margin-left: 17vw;
+  bottom: 56vh;
   font-size: larger;
   text-shadow: 0 0 2px #000;
   background: transparent;
@@ -226,17 +231,33 @@ footer {
   }
 
   .pic-p {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-    grid-auto-flow: column ;
-    max-height: fit-content;
+
+    max-height: 35vh;
     z-index: 1; /* Increase z-index to bring it above the background shape */
     justify-self: right;
+    max-width: 25vw;
+    height: auto;
   }
 
   .profile-picture {
-    height: 70vh;
-    width: auto;
+    display: none;
+  }
+
+  .profile-picture-name-under {
+    display: flex;
+    flex: 1;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    max-width: 25vw;
+    height: auto;
+  }
+
+  .profile-container {
+    position: relative;
+    max-width: 25vw;
+    height: auto;
+    grid-column: 1;
+    grid-row: 1 / span 2;
   }
 
   p > :not(.profile-picture) { 
@@ -245,11 +266,12 @@ footer {
   }
 
   .my-name {
-    position: relative;
-    display: flex;
-    translate: 50% 50%;
+    position: absolute;
+    bottom: 20%; /* Adjust as needed */
+    left: 0; 
+    transform: translateX(-50%);
+    text-align: center; 
     z-index: 2;
-    justify-content: right;
   }
 
   .logos {
