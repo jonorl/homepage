@@ -17,8 +17,8 @@ header {
   margin: 0 auto;
   display: block;
   background-image: url("../images/background.svg");
-  background-repeat:no-repeat;
-  background-position: 0% 4.5%; 
+  background-repeat: no-repeat;
+  background-position: 0% 4.5%;
 }
 
 main {
@@ -37,7 +37,6 @@ h1 {
 }
 
 h2 {
-  
   align-self: center;
   justify-self: left;
   font-size: 1.2em;
@@ -86,7 +85,7 @@ i {
   right: 0;
   width: 100%;
   height: 50%;
-  background-color: #2AB7CA;  /* Turquoise blue color */
+  background-color: #2ab7ca; /* Turquoise blue color */
   clip-path: polygon(100% 0, 100% 100%, 0 100%, 70% 0);
   border-radius: 25px;
   z-index: -1;
@@ -129,7 +128,7 @@ i.devicon-github-original {
   display: grid;
   grid-template-columns: 1fr auto auto;
   grid-template-rows: auto 1fr;
-  margin: 0 10vw 
+  margin: 0 10vw;
 }
 
 .subheader > p {
@@ -169,7 +168,8 @@ footer {
 }
 
 .footer-container p,
-.footer-container h1, .footer-container>.footer-logos{
+.footer-container h1,
+.footer-container > .footer-logos {
   color: #000;
   text-shadow: none;
   padding: 0 5vw;
@@ -190,32 +190,19 @@ footer {
 
 /* Desktop */
 @media (min-width: 768px) {
+  /* Header */
 
   header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr auto;
     background-image: url("../images/background.svg");
-    position: relative; 
-    max-width: 100vw;
+    position: relative;
+    max-width: 99vw;
     background-size: cover;
-    height: 100vh;
-    grid-auto-flow: column ;
-  }
-
-  .background-shape {
-    position: static;
-    background: none;
-    clip-path: none;
-    border-radius: 25px;
-    z-index: -1;
-  }
-
- .floating-picture {
-    position: absolute;
-    display: grid;
-    grid-column: 1;
-    grid-row: 2
+    max-height: 75vh;
+    grid-auto-flow: column;
+    margin-bottom: 15vh;
   }
 
   .desc {
@@ -227,16 +214,7 @@ footer {
   .about-me {
     margin-top: 20vh;
     grid-column: 2;
-    grid-row: 1
-  }
-
-  .pic-p {
-
-    max-height: 35vh;
-    z-index: 1; /* Increase z-index to bring it above the background shape */
-    justify-self: right;
-    max-width: 25vw;
-    height: auto;
+    grid-row: 1;
   }
 
   .profile-picture {
@@ -248,34 +226,139 @@ footer {
     flex: 1;
     grid-column: 1;
     grid-row: 1 / span 2;
-    max-width: 25vw;
-    height: auto;
-  }
-
-  .profile-container {
-    position: relative;
-    max-width: 25vw;
-    height: auto;
-    grid-column: 1;
-    grid-row: 1 / span 2;
-  }
-
-  p > :not(.profile-picture) { 
-    grid-column: 2;
-    grid-row: 1 / span 2;
+    height: 100%;
+    width: auto;
+    max-height: 75vh;
+    margin-right: 5vw;
+    justify-self: right;
+    align-self: center;
   }
 
   .my-name {
     position: absolute;
     bottom: 20%; /* Adjust as needed */
-    left: 0; 
+    left: 0;
     transform: translateX(-50%);
-    text-align: center; 
+    text-align: center;
     z-index: 2;
   }
 
   .logos {
     grid-column: 1 / span 2;
     grid-row: 3;
+  }
+
+  /* Main */
+
+  main {
+    max-width: 80vw;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    grid-auto-flow: column;
+    gap: 5vh;
+  }
+
+  .my-work {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    align-content: center;
+    font-size: 32px;
+  }
+
+  #card {
+    justify-self: center;
+    align-content: center;
+    border-width: auto;
+    border-radius: 25px;
+    border: aliceblue solid 2px;
+    column-gap: 5vh;
+    margin-bottom: 0;
+  }
+
+  .subheader {
+    margin: 0;
+    justify-content: center;
+    column-gap: 1vw;
+  }
+
+  .subheader h2 {
+    justify-content: left;
+    padding-left: 1.5vw;
+  }
+
+  .external-link {
+    margin-right: 3vw;
+  }
+
+  #project-image {
+    max-height: 30vh;
+    height: 100%;
+    width: auto;
+  }
+
+  /* footer */
+
+  footer {
+    margin-top: 10vh;
+    max-width: 80vw;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    justify-content: center;
+    max-width: fit-content;
+  }
+
+  .footer-container img{
+    max-width: 600px;
+    margin-right: 10vw;
+  }
+
+  .profile-picture-alt {
+    grid-column: 2;
+    grid-row: 1 / span 6;
+    align-self: center;
+  }
+
+  .contact-me {
+    justify-self: left;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .footer-message {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .address {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .phone {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .email {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .footer-logos {
+    grid-column: 1;
+    grid-row: 6;
+    justify-self: left;
+    align-self: center;
   }
 }
