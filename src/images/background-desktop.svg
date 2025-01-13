@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 490" width="950" height="490">
+  <!-- Blue background -->
+  <rect width="950" height="490" fill="#00A5CF" />
+
+  <!-- White card -->
+  <rect x="370" y="100" width="500" height="300" fill="white" rx="10" />
+
+  <!-- Optional diagonal element (if present visually) -->
+  <polygon points="0,490 370,490 370,400 0,300" fill="white" />
+</svg>

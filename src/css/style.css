@@ -3,6 +3,7 @@
 * {
   color: aliceblue;
   font-size: 14px;
+
   font-family: "Roboto";
 }
 
@@ -147,7 +148,6 @@ i.devicon-github-original {
 
 del {
   color: aliceblue;
-  /* text-decoration-color:#000 */
 }
 
 footer {
@@ -173,6 +173,10 @@ footer {
   color: #000;
   text-shadow: none;
   padding: 0 5vw;
+}
+
+.external-link {
+  align-self: center;
 }
 
 .footer-container img {
@@ -203,15 +207,22 @@ footer {
     max-height: 75vh;
     grid-auto-flow: column;
     margin-bottom: 15vh;
+    line-height: 1.8;
   }
 
   .desc {
     grid-column: 2;
     grid-row: 2;
     align-content: center;
+    font-size: 20px;
+  }
+
+  del {
+    font-size: 20px;
   }
 
   .about-me {
+    font-size: 36px;
     margin-top: 20vh;
     grid-column: 2;
     grid-row: 1;
@@ -230,7 +241,7 @@ footer {
     width: auto;
     max-height: 75vh;
     margin-right: 5vw;
-    justify-self: right;
+    justify-self: center;
     align-self: center;
   }
 
@@ -255,6 +266,7 @@ footer {
     display: flex;
     flex: 1;
     justify-content: center;
+    line-height: 1.8;
   }
 
   .projects {
@@ -280,6 +292,7 @@ footer {
     border: aliceblue solid 2px;
     column-gap: 5vh;
     margin-bottom: 0;
+    font-size: 24px;
   }
 
   .subheader {
@@ -288,9 +301,14 @@ footer {
     column-gap: 1vw;
   }
 
+  .subheader p {
+    font-size: 24px;
+  }
+
   .subheader h2 {
     justify-content: left;
     padding-left: 1.5vw;
+    font-size: 30px;
   }
 
   .external-link {
@@ -308,6 +326,7 @@ footer {
   footer {
     margin-top: 10vh;
     max-width: 80vw;
+    line-height: 1.8;
   }
 
   .footer-container {
@@ -316,6 +335,11 @@ footer {
     grid-template-rows: auto auto auto auto auto auto auto;
     justify-content: center;
     max-width: fit-content;
+
+  }
+
+  .footer-container p {
+    font-size: 24px;
   }
 
   .footer-container img{
@@ -331,8 +355,10 @@ footer {
 
   .contact-me {
     justify-self: left;
+    font-weight: 600;
     grid-column: 1;
     grid-row: 1;
+    font-size: 32px;
   }
 
   .footer-message {
