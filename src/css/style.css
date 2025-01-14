@@ -3,7 +3,6 @@
 * {
   color: aliceblue;
   font-size: 14px;
-
   font-family: "Roboto";
 }
 
@@ -46,6 +45,10 @@ h2 {
 
 .devicon-github-original {
   align-self: center;
+}
+
+.desc {
+  display: none;
 }
 
 .logos {
@@ -166,11 +169,10 @@ footer {
 
 /* Tablet */
 @media (min-width: 481px) and (max-width: 1000px) {
-
-    /* Header */
+  /* Header */
 
   header {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='100,0 100,100 0,100 100,0' fill='%232AB7CA' transform='rotate(180, 50, 50)'%3E%3C/polygon%3E%3C/svg%3E");    
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='100,0 100,100 0,100 100,0' fill='%232AB7CA' transform='rotate(180, 50, 50)'%3E%3C/polygon%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: 0;
@@ -193,6 +195,11 @@ footer {
     float: left;
   }
 
+  .desc :not(.profile-picture) wa {
+    text-shadow: 0 0 5px #000;
+    font-size: 36px;
+  }
+
   .profile-picture-name-under {
     display: none;
   }
@@ -201,24 +208,29 @@ footer {
     position: relative;
     display: block;
     top: 8vh;
-    right: 17vw;
-    font-size: 36px;
-    text-shadow: 0 0 2px #000;
+    left: 35vw;
+    font-size: 44px;
+    text-shadow: 0 0 5px #000;
     background: transparent;
   }
 
   .desc {
+    display: block;
     top: -5vh;
     justify-self: center;
-    max-width: 55vw;
+    max-width: 62vw;
     right: 0vw;
     font-size: 20px;
     overflow: hidden;
   }
+  
+  .desc-mob-desk {
+    display: none;
+  }
 
   .desc :not(.profile-picture) {
-margin-left: 2vw;
-font-size: 20px;
+    font-size: 20px;
+    line-height: 2.5px;
   }
 
   del {
@@ -226,19 +238,10 @@ font-size: 20px;
   }
 
   .about-me {
-    position: relative;
-    font-size: 36px;
-    top: 15vh;
-    right: 7vw;
-    grid-column: 2;
-    grid-row: 1;
+    display: none;
   }
 
   .logos {
-    top: 8vh;
-    position: relative;
-    grid-column: 1 / span 2;
-    grid-row: 3;
     margin-bottom: 2vh;
   }
 
@@ -261,7 +264,7 @@ font-size: 20px;
 
   .my-work {
     grid-column: 1 / span 2;
-    grid-row: 1 ;
+    grid-row: 1;
     align-content: center;
     justify-self: left;
     margin-left: 1vw;
@@ -310,69 +313,71 @@ font-size: 20px;
 
   /* footer */
 
-    footer {
-      margin-top: 10vh;
-      max-width: 99vw;
-      line-height: 1.8;
-    }
-  
-    .footer-container {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      grid-template-rows: auto auto auto auto auto auto auto;
-      max-width: fit-content;
-    }
-  
-    .footer-container p {
-      font-size: 24px;
-    }
-  
-    .footer-container img {
-      max-width: fit-content;
-      width: 40vw;
-      margin-right: 2vw;
-    }
-  
-    .profile-picture-alt {
-      grid-column: 2;
-      grid-row: 1 / span 6;
-      align-self: center;
-    }
-  
-    .contact-me {
-      justify-self: left;
-      font-weight: 600;
-      grid-column: 1;
-      grid-row: 1;
-      font-size: 32px;
-    }
-  
-    .footer-message {
-      grid-column: 1;
-      grid-row: 2;
-    }
-  
-    .address {
-      grid-column: 1;
-      grid-row: 3;
-    }
-  
-    .phone {
-      grid-column: 1;
-      grid-row: 4;
-    }
-  
-    .email {
-      grid-column: 1;
-      grid-row: 5;
-    }
-  
-    .footer-logos {
-      grid-column: 1;
-      grid-row: 6;
-      justify-self: left;
-      align-self: center;
-    }
+  footer {
+    margin-top: 10vh;
+    max-width: 99vw;
+    line-height: 1.8;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    max-width: fit-content;
+  }
+
+  .footer-container p {
+    font-size: 24px;
+  }
+
+  .footer-container img {
+    max-width: fit-content;
+    width: 40vw;
+    margin-right: 2vw;
+  }
+
+  .profile-picture-alt {
+    grid-column: 2;
+    grid-row: 1 / span 6;
+    align-self: center;
+  }
+
+  .contact-me {
+    justify-self: left;
+    font-weight: 600;
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 32px;
+  }
+
+  .footer-message {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .address {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .phone {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .email {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .footer-logos {
+    grid-column: 1;
+    grid-row: 6;
+    justify-self: left;
+    align-self: center;
+  }
 }
 
 /* Desktop */
@@ -390,11 +395,11 @@ font-size: 20px;
     background-size: cover;
     max-height: 75vh;
     grid-auto-flow: column;
-    margin-bottom: 15vh;
+    margin-bottom: 3vh;
     line-height: 1.8;
   }
 
-  .desc {
+  .desc-mob-desk {
     grid-column: 2;
     grid-row: 2;
     align-content: center;
@@ -407,7 +412,7 @@ font-size: 20px;
 
   .about-me {
     font-size: 36px;
-    margin-top: 20vh;
+    margin-top: 15vh;
     grid-column: 2;
     grid-row: 1;
   }
@@ -447,12 +452,12 @@ font-size: 20px;
   /* Main */
 
   main {
-    max-width: 80vw;
-    display: flex;
-    flex: 1;
-    justify-content: center;
+    max-width: 85vw;
+    justify-items: center;
     line-height: 1.8;
+    height: auto;
   }
+
 
   .projects {
     display: grid;
@@ -502,25 +507,30 @@ font-size: 20px;
   }
 
   #project-image {
-    max-height: 30vh;
+    max-height: max-content;
+    max-width: max-content;
     padding-left: 1.5vw;
     padding-right: 1.5vw;
     padding-top: 1.5vh;
-    height: 100%;
-    width: auto;
+    height: 30vh;
+    width: 25vw;
   }
 
   /* footer */
 
   footer {
     margin-top: 10vh;
-    max-width: 80vw;
+    max-width: none;
     line-height: 1.8;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .footer-container {
     display: grid;
-    grid-template-columns: auto 1fr;
+
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto auto auto auto auto auto;
     justify-content: center;
     max-width: fit-content;
@@ -530,7 +540,7 @@ font-size: 20px;
     font-size: 24px;
   }
 
-  .footer-container img{
+  .footer-container img {
     max-width: 600px;
     margin-right: 10vw;
   }
@@ -577,7 +587,8 @@ font-size: 20px;
     margin-bottom: 2vh;
   }
 
-  .devicon-github-original-wordmark, .devicon-linkedin-plain {
+  .devicon-github-original-wordmark,
+  .devicon-linkedin-plain {
     font-size: 64px;
   }
 }
