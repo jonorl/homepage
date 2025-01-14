@@ -4,6 +4,7 @@
   color: aliceblue;
   font-size: 14px;
   font-family: "Roboto";
+  line-height: 1.5;
 }
 
 body {
@@ -48,6 +49,10 @@ h2 {
 }
 
 .desc {
+  display: none;
+}
+
+.my-name {
   display: none;
 }
 
@@ -248,7 +253,7 @@ footer {
   /* Main */
 
   main {
-    max-width: 85vw;
+    max-width: 80vw;
     justify-items: center;
     line-height: 1.8;
   }
@@ -435,12 +440,7 @@ footer {
   }
 
   .my-name {
-    position: absolute;
-    bottom: 20%; /* Adjust as needed */
-    left: 0;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 2;
+    display: none;
   }
 
   .logos {
