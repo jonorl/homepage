@@ -397,6 +397,7 @@ footer {
     max-width: 99vw;
     background-size: cover;
     min-height: 75vh;
+    min-height: -webkit-fill-available;
     grid-auto-flow: column;
     margin-bottom: 3vh;
     line-height: 1.8;
