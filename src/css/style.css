@@ -190,11 +190,9 @@ footer {
 
   .profile-picture {
     border-radius: 25px;
-    top: 5vh;
-    height: 100%;
+    height: auto;
     display: block;
     width: auto;
-    justify-content: left;
     max-width: 35vw;
     margin: 0 5vw 5vh 0;
     float: left;
